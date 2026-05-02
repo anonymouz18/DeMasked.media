@@ -99,14 +99,14 @@ body {
 
 
 #todo .task {
-    width: 95%;
+    width: 65%;
     max-width: 500px;
     padding: 50px;
     background: #c40290;
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid #000000;
-    box-shadow: 0 0 30px rgba(172, 0, 182, 0.3);
+    
     /* Bright pink */
 }
 
