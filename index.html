@@ -43,6 +43,25 @@
         </div>
     </div>
 
+    /* Login Dialog */
+    <dialog id="loginDialog" class="login-dialog">
+        <form method="dialog" class="login-box" id="loginForm">
+            <h2>Login</h2>
+
+            <label for="password">Passwort</label>
+
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" placeholder="Passwort eingeben" required>
+                <button type="button" id="toggleBtn">Anzeigen</button>
+            </div>
+
+            <p class="hint" id="status">Bitte gib dein Passwort ein.</p>
+
+            <button type="submit" class="login-btn">Einloggen</button>
+        </form>
+    </dialog>
+
+    /* Show the login dialog on page load */
     <script src="script.js"></script>
 </body>
 

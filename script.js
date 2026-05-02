@@ -130,30 +130,57 @@ function updateLocalStorage() {
 
 //Passworteingabe
 
-// HTML-Elemente auswählen
+const dialog = document.getElementById("loginDialog");
+const loginForm = document.getElementById("loginForm");
 const passwordInput = document.getElementById("password");
 const toggleBtn = document.getElementById("toggleBtn");
 const statusText = document.getElementById("status");
 
-// Passwort anzeigen oder verbergen
-toggleBtn.addEventListener("click", () => {
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    toggleBtn.textContent = "Verbergen";
-    statusText.textContent = "Das Passwort ist sichtbar.";
-  } 
-  else {
-    passwordInput.type = "password";
-    toggleBtn.textContent = "Anzeigen";
-    statusText.textContent = "Das Passwort ist verborgen.";
+// Dialog beim Laden öffnen
+document.addEventListener("DOMContentLoaded", function () {
+  renderTasks();
+
+  if (dialog) {
+    dialog.showModal();
   }
 });
 
-// Status bei Eingabe aktualisieren
-passwordInput.addEventListener("input", () => {
-  if (passwordInput.value.length > 0) {
-    statusText.textContent = "Es wurde ein Passwort eingegeben.";
-  } else {
-    statusText.textContent = "Das Passwort ist verborgen.";
-  }
-});
+// Passwort anzeigen oder verbergen
+if (toggleBtn && passwordInput && statusText) {
+  toggleBtn.addEventListener("click", () => {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleBtn.textContent = "Verbergen";
+      statusText.textContent = "Das Passwort ist sichtbar.";
+    } else {
+      passwordInput.type = "password";
+      toggleBtn.textContent = "Anzeigen";
+      statusText.textContent = "Das Passwort ist verborgen.";
+    }
+  });
+
+  passwordInput.addEventListener("input", () => {
+    if (passwordInput.value.length > 0) {
+      statusText.textContent = "Es wurde ein Passwort eingegeben.";
+    } else {
+      statusText.textContent = "Bitte gib dein Passwort ein.";
+    }
+  });
+}
+
+// Login prüfen
+if (loginForm && passwordInput && statusText && dialog) {
+  loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const richtigesPasswort = "test123";
+
+    if (passwordInput.value === richtigesPasswort) {
+      dialog.close();
+    } else {
+      statusText.textContent = "Falsches Passwort.";
+      passwordInput.value = "";
+      passwordInput.focus();
+    }
+  });
+}
