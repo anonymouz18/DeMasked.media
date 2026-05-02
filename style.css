@@ -106,14 +106,14 @@ body {
 }
 
 #in-progress .task {
-  background-color: #ffcdd2;
+  background-color: #3316d7;
   width: 250px;
   height: 250px;
     /* Light pink */
 }
 
 #done .task {
-    background-color: #c8e6c9;
+    background-color: #8907f4;
     /* Light green */
 }
 
@@ -139,75 +139,4 @@ body {
     justify-content: space-around;
     margin-bottom: 3px;
 
-}
-
-.link {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 14px;
-}
-
-.link:hover {
-    text-decoration: underline;
-}
-
-/* Login-Box */
-.login-box {
-    background: white;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    width: 320px;
-}
-
-/* Überschrift */
-h2 {
-    margin-top: 0;
-    margin-bottom: 16px;
-    text-align: center;
-}
-
-/* Beschriftung */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-/* Passwortfeld und Button nebeneinander */
-.password-wrapper {
-    display: flex;
-    gap: 8px;
-}
-
-/* Eingabefeld */
-input {
-    flex: 1;
-    padding: 10px 12px;
-    border: 1px solid #bbb;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-/* Button */
-button {
-    padding: 10px 12px;
-    border: none;
-    background: #1f6feb;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-/* Button beim Darüberfahren */
-button:hover {
-    background: #1558b0;
-}
-
-/* Status-Text */
-.hint {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
 }
