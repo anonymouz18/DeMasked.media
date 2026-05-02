@@ -104,7 +104,11 @@ body {
 }
 
 #in-progress .task {
-    background-color: #ffcdd2;
+  background-color: #ffcdd2;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
     /* Light pink */
 }
 
