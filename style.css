@@ -143,13 +143,13 @@ body {
 
 .link {
     text-decoration: none;
-    color: #ac2ff5;
-    font-size: 14px;
+    color: #ebc9ff;
+    font-size: 18px;
     transition: color 0.3s;
 }
 
 .link:hover {
-    color: #5202a8;
+    color: #9a4eca;
      /* Change color on hover */
 }
 
