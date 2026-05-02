@@ -107,6 +107,8 @@ body {
 
 #in-progress .task {
   background-color: #ffcdd2;
+  width: 150px;
+  height: 150px;
     /* Light pink */
 }
 
