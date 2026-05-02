@@ -1,27 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="de">
 
 <head>
-    <title>Passwort-Abfrage</title>
-    <script type="text/javascript">
-        <!--
-        function passw()
-        {
-        if(document.f1.pass.value=="Passwort")
-        document.location.href="right.html";
-        else
-        alert("Falsches Passwort");
-        }
-        //-->
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passworteingabe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    Um hier weiterzukommen müsst du dich einloggen!</br>
-    Gib dafür bitte dein Passwort ein.</br>
-    <form name="f1">
-        <input type="password" name="pass" size="15">
-    </form>
-    <h3>[url="javascript:passw()"]Weiter[/url]</h3>
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <label for="password">Passwort</label>
+
+        <div class="password-wrapper">
+            <input type="password" id="password" name="password" placeholder="Passwort eingeben" required minlength="4">
+            <button type="button" id="toggleBtn">Anzeigen</button>
+        </div>
+
+        <p class="hint" id="status">Das Passwort ist verborgen.</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
