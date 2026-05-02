@@ -129,7 +129,7 @@ function updateLocalStorage() {
 }
 
 //Passworteingabe
-
+// Elemente für das Login-Dialog
 const dialog = document.getElementById("loginDialog");
 const loginForm = document.getElementById("loginForm");
 const passwordInput = document.getElementById("password");
