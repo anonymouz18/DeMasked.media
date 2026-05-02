@@ -93,7 +93,8 @@ body {
 
 
 .add-task-btn:hover {
-    background-color: #45a049;
+    background-color: #410076;
+     /* Darker shade on hover */
 }
 
 
