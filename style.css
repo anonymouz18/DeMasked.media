@@ -99,18 +99,16 @@ body {
 
 
 #todo .task {
-    width: 95%;
-    max-width: 50px;
-    padding: 10px;
-    background: #c40290;
-    border-radius: 10px;
-    border: 1px solid #000000;
-    
+    background-color: #fb009b;
+     width: 300px;
+  height: 180px;
     /* Bright pink */
 }
 
 #in-progress .task {
   background-color: #ffcdd2;
+  width: 250px;
+  height: 250px;
     /* Light pink */
 }
 
