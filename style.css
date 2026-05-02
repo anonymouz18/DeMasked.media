@@ -100,8 +100,7 @@ body {
 
 #todo .task {
     background-color: #ff34b16b;
-     width: 300px;
-  height: 180px;
+    
     /* Bright pink */
 }
 
@@ -114,6 +113,8 @@ body {
 
 #done .task {
     background-color: #a436ff5e;
+    width: 150px;
+  height: 150px;
     /* Light green */
 }
 
