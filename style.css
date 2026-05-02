@@ -101,7 +101,7 @@ body {
 #todo .task {
     width: 95%;
     max-width: 800px;
-    padding: 30px;
+    padding: 50px;
     background: #c40290;
     backdrop-filter: blur(10px);
     border-radius: 20px;
