@@ -99,21 +99,21 @@ body {
 
 
 #todo .task {
-    background-color: #fb009b;
+    background-color: #ff34b16b;
      width: 300px;
   height: 180px;
     /* Bright pink */
 }
 
 #in-progress .task {
-  background-color: #3316d7;
+  background-color: #3f1dff6a;
   width: 150px;
   height: 150px;
     /* Light pink */
 }
 
 #done .task {
-    background-color: #8907f4;
+    background-color: #a436ff5e;
     /* Light green */
 }
 
