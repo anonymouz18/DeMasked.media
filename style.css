@@ -1,32 +1,66 @@
 /* style.css */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Body-Stil */
+body {
+    background-color: #f5f5f5;
+    font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+    display: flex;   /*Flexbox für vertikale Anordnung*/
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Kopfzeile-Stil */
 .head {
     background-color: #3a0176;
     color: #fff;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    padding: 20px;
-    box-shadow:
-        0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /*Flexbox für horizontale Anordnung*/
+    align-items: left; /*Vertikale Ausrichtung der Elemente*/
+    justify-content: left; /*Horizontale Ausrichtung der Elemente*/
+    padding: 10px 20px; /*Padding für Abstand um die Inhalte herum*/
+    gap: 15px; /*Abstand zwischen den Elementen*/
 }
 
 .head img {
-    width: 50px;
-    margin-right: 10px;
+    width: auto;
+    height: 40px;
 }
 
 .head h1 {
-    font-size: 24px;
+    font-size: 22px;
+    margin: 0;
+    margin-right: auto; /*Automatischer Abstand nach rechts, um die Links auf der rechten Seite zu halten*/
+}
+
+/* Link-Stil */
+.link {
+    text-decoration: none;
+    color: #ebc9ff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #9a4eca;
+    /* Change color on hover */
+}
+
+.link nav {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
+.link #nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Kanban Board-Stil */
 .board {
     display: flex;
     flex-wrap: wrap;
@@ -34,6 +68,7 @@ body {
     padding: 20px;
 }
 
+/* Spalten-Stil */
 .column {
     /* width: 30%; */
     width: calc(100% - 30px);
@@ -66,6 +101,10 @@ body {
     border-radius: 5px;
     margin-bottom: 10px;
     cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
 }
 
 .delete-btn {
@@ -91,12 +130,10 @@ body {
     transition: background-color 0.3s;
 }
 
-
 .add-task-btn:hover {
     background-color: #560065;
      /* Darker shade on hover */
 }
-
 
 #todo .task {
     background-color: #ff34b16b;
@@ -122,51 +159,11 @@ body {
     /* Light green */
 }
 
-.task {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 5px;
-    cursor: move;
-}
-
-.delete-btn {
-    float: right;
-
-    cursor: pointer;
-}
-
 .tasks-in-btn {
     display: flex;
     justify-content: space-around;
     margin-bottom: 3px;
 
-}
-
-.link {
-    text-decoration: none;
-    color: #ebc9ff;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.link:hover {
-    color: #9a4eca;
-     /* Change color on hover */
-}
-
-.link nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.link #nav li {
-    display: inline-block;
-    margin-right: 15px;
 }
 
 /* Login-Box */
@@ -179,27 +176,27 @@ body {
 }
 
 /* Überschrift */
-h2 {
+.login-box h2 {
     margin-top: 0;
     margin-bottom: 16px;
     text-align: center;
 }
 
 /* Beschriftung */
-label {
+.login-box label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
 }
 
 /* Passwortfeld und Button nebeneinander */
-.password-wrapper {
+.login-box .password-wrapper {
     display: flex;
     gap: 8px;
 }
 
 /* Eingabefeld */
-input {
+.login-box input {
     flex: 1;
     padding: 10px 12px;
     border: 1px solid #bbb;
@@ -208,7 +205,7 @@ input {
 }
 
 /* Button */
-button {
+.login-box button {
     padding: 10px 12px;
     border: none;
     background: #1f6feb;
@@ -218,12 +215,12 @@ button {
 }
 
 /* Button beim Darüberfahren */
-button:hover {
+.login-box button:hover {
     background: #1558b0;
 }
 
 /* Status-Text */
-.hint {
+.login-box .hint {
     margin-top: 10px;
     font-size: 14px;
     color: #555;
