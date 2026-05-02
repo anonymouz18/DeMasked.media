@@ -12,8 +12,6 @@ body {
     display: flex;   /*Flexbox für vertikale Anordnung*/
     flex-direction: column;
     min-height: 100vh;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Kopfzeile-Stil */
@@ -170,6 +168,9 @@ body {
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     width: 320px;
+    margin: 40px auto; /*Zentriert die Login-Box auf der Seite*/
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    justify-content: center; /* Zentriert die Inhalte horizontal */
 }
 
 /* Überschrift */
