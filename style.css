@@ -10,8 +10,6 @@ body {
     background-color: #f5f5f5;
     font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
     display: flex;   /*Flexbox für vertikale Anordnung*/
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 /* Kopfzeile-Stil */
@@ -21,36 +19,45 @@ body {
     display: flex; /*Flexbox für horizontale Anordnung*/
     align-items: center; /* Vertikale Zentrierung der Elemente*/
     justify-content: space-between; /* Automatischer Abstand zwischen den Elementen, um sie auf die gegenüberliegenden Seiten zu verteilen*/
-    padding: 10px 20px; /*Innenabstand der Kopfzeile*/
+    padding: 15px 30px; /*Innenabstand der Kopfzeile*/
+
+}
+
+.left {
+    display: flex;
+    align-items: center;
     gap: 15px; /*Abstand zwischen den Elementen*/
 }
 
 .head img {
     width: auto;
-    height: 80px;
+    height: 70px;
 }
 
 .head h1 {
     font-size: 28px;
     font-weight: 600;
     margin: 0 20px; /*Abstand zwischen Logo und Titel*/
-    margin-right: auto; /*Automatischer Abstand nach rechts, um die Links auf der rechten Seite zu halten*/
 }
 
 /* Link-Stil */
 .link {
     display: flex;
-    gap: 20px;
-    margin-left: auto; /*Automatischer Abstand nach links, um die Links auf der rechten Seite zu halten*/
+    gap: 25px;
+    list-style: none;
     margin-bottom: 3px;
     align-items: center;
-    text-decoration: none;
-    color: #ebc9ff;
     font-size: 24px;
     transition: color 0.3s;
+    margin-left: 20px;
 }
 
-.link:hover {
+.link a {
+    text-decoration: none;
+    color: #ebc9ff;
+}
+
+.link a:hover {
     color: #9a4eca;
     /* Change color on hover */
 }
@@ -60,7 +67,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Spalten-Stil */
@@ -70,7 +77,7 @@ body {
     max-width: 400px;
     margin: 10px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px;
     box-shadow:
         0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -167,10 +174,10 @@ body {
     padding: 24px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    width: 320px;
-    margin: 40px auto; /*Zentriert die Login-Box auf der Seite*/
-    align-items: center; /* Zentriert die Inhalte vertikal */
-    justify-content: center; /* Zentriert die Inhalte horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Überschrift */
@@ -241,4 +248,39 @@ body {
 .login-btn {
   width: 100%;
   margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+
+    /* Header untereinander */
+    .head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .link {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* Board untereinander */
+    .board {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 90%;
+        max-width: none;
+    }
+
+    /* Logo kleiner */
+    .head img {
+        height: 60px;
+    }
+
+    .head h1 {
+        font-size: 22px;
+    }
 }
